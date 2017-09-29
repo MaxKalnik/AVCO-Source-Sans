@@ -2,8 +2,13 @@
 @import "_mixins.styl"
 
 body
-  font-family: Whitney SSm A, sans-serif;
+  font-family: Whitney HTF, sans-serif;
   $ultraThin()
+
+ul,li
+  list-style: none
+  margin: 0
+  padding: 0
 
 .main-article
   &--table
@@ -15,10 +20,10 @@ body
   position relative
 
 .main-text
-  font-size: 14px
-  color: $text_color
+  font-size: 16px
+  color: #1c3144
   letter-spacing: -0.1px
-  line-height: 24px
+  line-height: 26px
   font-weight 400
 
   &.ind-text
@@ -143,16 +148,24 @@ b
   padding: 45px 45px 45px 45px
   background-color: $color_white
   margin-bottom: 10px
-  &--upper
-    position: relative
-    padding-left: 31px
+
+.text-box--overview
+  padding-bottom: 60px
+
+.under-title__wrap
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  margin-bottom: 38px
+
+.under-title__img
+  margin-right: 31px
 
 .under-title
   color: #4a4a4a
-  font-size: 18px
-  line-height: 30px
+  font-size: 20px
+  line-height: 32px
   font-weight: 200
-  margin-bottom: 44px
 
 .upper-text
   color: #475359
@@ -163,26 +176,70 @@ b
   &:last-child
     margin-bottom: 0
 
-.upper-text__container
-  position: relative
-  padding-left: 44px
-  &:before
-    content: ''
-    position: absolute
-    width: 32px
-    height: 245px
-    left: 0
-    top: 8px
-    background: url('images/left-side.svg') center no-repeat
-    background-size: cover
-
 .block-title
-  font-size: 32px
-  line-height: 40px
-  margin-bottom: 30px
+  font-size: 34px
+  line-height: 42px
+  margin-bottom: 34px
   color: #103144
   text-align: center
   font-weight: 600
+  text-transform: uppercase
+
+.block-subtitle
+  font-size: 34px
+  line-height: 42px
+  font-weight: 600
+  color: $text_color
+  margin-bottom: 30px
+  text-align: center
+
+.block-subtitle--overview
+  margin-bottom: 16px
+
+.block-info
+  position: relative
+  padding: 23px 38px 25px 94px
+  font-size: 18px
+  line-height: 26px
+  font-style: italic
+  color: $text_color
+  border: 1px solid rgba(255,68,137,0.30)
+  border-radius: 5px
+  margin-bottom: 32px
+  &:before
+    content: ''
+    position: absolute
+    width: 24px
+    height: 24px
+    top: 50%
+    transform: translateY(-50%)
+    left: 38px
+    background: url(images/icons/info-icon.svg) center no-repeat
+    background-size: cover
+
+.region
+  margin-bottom: 60px
+  &:last-child
+    margin-bottom: 0
+
+.region-features
+  margin-bottom: 45px
+
+.region-features__item
+  font-size: 16px
+  line-height: 26px
+  color: #173144
+  position: relative
+  text-align: left
+  padding-left: 24px
+  &:before
+    content: ''
+    position: absolute
+    top: 7px
+    left: 0
+    width: 8px
+    height: 8px
+    background: url('images/icons/oval-yellow.svg')
 
 .primary-text
   margin-bottom: 32px
@@ -191,258 +248,170 @@ b
   color: #173144
   text-align: center
 
-.primary-text--italic
-  font-style: italic
-
-.with-icon
-  position: relative
-  padding-left: 24px
-  font-weight: 600
-  font-style: italic
-  &:before
-    content: ''
-    position: absolute
-    width: 16px
-    height: 16px
-    left: 4px
-    top: 0
-    background: url('images/icons/icon-quality.svg') center no-repeat
-
-.with-icon--price
-  &:before
-    background: url('images/icons/icon-price.svg') center no-repeat
-    background-size: cover
-
-.with-icon--diversity
-  &:before
-    background: url('images/icons/icon-diversity.svg') center no-repeat
-    background-size: cover
-
-.ranking-info__top
+.region-list
   display: flex
   flex-direction: row
-  align-items: flex-end
-  margin-bottom: 6px
+  justify-content: center
 
-.ranking-info__title
-  font-size: 26px
-  line-height: 32px
-  font-weight: 600
-  color: #000000
+.region-list__item
+  margin-right: 45px
+  &:last-child
+    margin-right: none
 
-.ranking-info__title-img
-  display: inline-block
-  position: relative
-  margin-right: 12px
-
-.ranking-info__subtitle
-  display: block
-  position: relative
-  font-size: 12px
-  line-height: 13px
-  font-weight: 700
-  color: #475761
-  text-transform: uppercase
-  padding-left: 21px
-  margin-bottom: 16px
-  &:before
-    content: ''
-    position: absolute
-    width: 15px
-    height: 8px
-    left: 0
-    top: 2px
-    background: url(images/svg/airplane-ranking-icon.svg) center no-repeat
-    background-size: cover
-
-.ranking-info__text
-  font-size: 14px
-  line-height: 26px
-  font-weight: 400
-  color: #052433
-  margin-bottom: 16px
-
-.ranking-info__table
-  border-collapse: collapse
-  td
-    padding: 14px 20px
-    border: 1px solid #b8e1ef
-    font-size: 12px
-    line-height: 13px
-    font-weight: 700
-    color: #475761
-    text-transform: uppercase
-
-.data-icon
-  position: relative
-  display: block
-  padding-left: 21px
-  &:before
-    content: ''
-    position: absolute
-    width: 16px
-    height: 16px
-    left: 0
-    top: 0
-    background: url('images/icons/icon-quality.svg') center no-repeat
-    background-size: cover
-
-.data-icon--quality
-  &:before
-    height: 18px
-
-.data-icon--price
-  &:before
-    background: url('images/icons/icon-price.svg') center no-repeat
-    background-size: cover
-
-.data-icon--diversity
-  &:before
-    top: -1px
-    background: url('images/icons/icon-diversity.svg') center no-repeat
-    background-size: cover
-
-.ranking-container
+.region-list__link
   display: flex
   flex-direction: column
-
-.ranking-item
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-  margin-bottom: 45px
-  &:last-child
-    margin-bottom: 0
-
-.ranking-info
-  width: 652px
-
-.ranking-rest
-  width: 432px
-  padding: 16px 16px 32px 16px
+  justify-content: space-around
+  align-items: center
+  width: 165px
+  height: 165px
+  padding: 16px
+  border: 1px solid rgba(255,68,137,0.30)
+  border-radius: 5px
   box-sizing: border-box
-  box-shadow: 0 10px 20px 0 rgba(8,54,77,0.10)
+  text-align: center
+  transition: .25s ease-in
+  box-sizing: border-box
+  &:hover
+    background: #fff3f8
 
-.ranking-rest__img-container
-  position: relative
-  width: 402px
-  height: 140px
-  border-radius: 2px 2px 0 0
-  overflow: hidden
-  margin-bottom: 24px
-  &:before
-    content: ''
-    position: absolute
-    width: 171px
-    height: 24px
-    top: 18px
-    left: 0
-    background: url('images/photo/top-rated.png') center no-repeat
-    background-size: cover
-    z-index: 2
+.region-list__link-img
+  margin-top: 24px
 
-    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2)
-      background: url('images/photo/top-rated@2x.png') center no-repeat
-      background-size: cover
+.region-list__link-text
+  font-size: 16px
+  line-height: 22px
+  color: #1a8aca
+  text-transform: uppercase
+  font-weight: 600
+  margin-top: auto
+  border-bottom: 1px dotted #99cde9
 
-.ranking-rest__img
-  position: absolute
-  top: -65%
-  left: 0
+.region-info
+  display: flex
+  flex-direction: column
+  align-items: center
+  border: 1px solid rgba(155,155,155,0.20)
+  border-radius: 5px
+  padding-top: 24px
 
-.ranking-rest__img--taiwan
-  top: auto
-  bottom: -30%
-
-.ranking-rest__img--hong-kong
-  top: -65%
-
-.ranking-rest__img--singapore
-  top: -15%
-
-.ranking-rest__img--amsterdam
-  top: -30%
-
-.ranking-rest__img--gatwick
-  top: -90%
-
-.ranking-rest__img--sydney
-  top: -30%
-
-.ranking-rest__img--madrid
-  top: -33%
-
-.ranking-rest__img--munich
-  top: -70%
-
-.ranking-rest__img--london
-  top: -35%
-
-.ranking-rest__img--frankfurt
-  top: -45%
-
-.ranking-rest__img--toronto
-  top: -45%
-
-.ranking-rest__img--paris
-  top: -110%
-  left: -10%
-
-.ranking-rest__img--barcelona
-  top: -105%
-
-.ranking-rest__img--rome
-  top: 2%
-
-.ranking-rest__name
+.region-info__text
   font-size: 18px
   line-height: 26px
-  font-weight: 600
-  color: #0a0c0d
-  padding-right: 10px
+  font-weight: 300
+  font-style: italic
+  margin-bottom: 24px
+  text-align: center
+  padding: 0 105px
 
-.ranking-rest__text
-  position: relative
-  font-size: 14px
-  line-height: 22px
-  font-weight: 400
-  color: #052433
-  padding-left: 22px
-  margin-bottom: 2px
-  &:before
-    content: ''
-    position: absolute
-    width: 14px
-    height: 10px
-    top: 7px
-    left: 0
-    background: url('images/icons/icon-food.svg') center no-repeat
-    background-size: cover
-
-.ranking-rest__text--location
-  &:before
-    width: 11px
-    height: 16px
-    top: 3px
-    left: 2px
-    background: url('images/icons/icon-location.svg') center no-repeat
-    background-size: cover
-
-.ranking-rest__text--time
-  margin-bottom: 0
-  &:before
-    width: 13px
-    height: 13px
-    top: 4px
-    left: 2px
-    background: url('images/icons/icon-time.svg') center no-repeat
-    background-size: cover
-
-.ranking-rest__top
+.overview__item
   display: flex
   flex-direction: row
   justify-content: space-between
-  margin-bottom: 12px
+  align-items: center
+
+.overview__quote
+  font-size: 24px
+  line-height: 32px
+  color: #0A0C0D
+  font-weight: 600
+  font-style: italic
+  margin-left: auto
+  margin-right: auto
+
+.overview__quote--item-1
+  width: 292px
+
+.overview__quote--item-2
+  width: 329px
+  br
+    display: none
+
+.overview__quote--item-3
+  width: 300px
+
+.overview__text
+  min-width: 730px
+  max-width: 730px
+  font-size: 16px
+  line-height: 24px
+  color: #0A0C0D
+  font-weight: 300
+
+.overview__items-divider
+  width: 47px
+  margin: 45px auto
+
+.divider-circle
+  display: inline-block
+  margin-right: 7px
+  width: 8px
+  height: 8px
+  border-radius: 50%
+  background: #ff4489
+  &:last-child
+    margin-right: 0
+
+.cost
+  font-size: 20px
+  line-height: 24px
+  font-weight: 600
+
+.marked
+  position: relative
+
+.marked--item-1
+  &:before
+    content: '561.6% costlier'
+    line-height: 22px
+    position: absolute
+    left: -4px
+    top: 4px
+    width: 182px
+    height: 24px
+    padding-left: 4px
+    background: url('images/svg/marked-1.svg') center no-repeat
+
+.marked--item-2
+  &:before
+    content: 'spend proportionally less'
+    line-height: 22px
+    text-align: right
+    position: absolute
+    right: -4px
+    top: 4px
+    width: 278px
+    height: 24px
+    padding-right: 4px
+    background: url('images/svg/marked-2.svg') center no-repeat
+
+.marked--item-3
+  &:before
+    content: 'than 25.0%'
+    line-height: 22px
+    text-align: right
+    position: absolute
+    right: -4px
+    top: 4px
+    width: 115px
+    height: 24px
+    padding-right: 4px
+    background: url('images/svg/marked-3.svg') right no-repeat
+
+.marked--item-4
+  &:before
+    content: '16.2%'
+    line-height: 22px
+    position: absolute
+    left: -4px
+    top: 4px
+    width: 92px
+    height: 24px
+    padding-left: 4px
+    background: url('images/svg/marked-4.svg') center no-repeat
+
+.before-marked
+  color: transparent
 
 .rate-block
   background: linear-gradient(147deg, #40C8F7 0%, #46ADF0 100%)
@@ -488,53 +457,27 @@ b
     font-size: 14px
     line-height: 24px
 
-.methodology-content__item
+.block-title--methodology
+  text-transform: none
+
+.methodology-content
   display: flex
   flex-direction: row
-  justify-content: space-between
   align-items: flex-start
 
-.methodology__img
-  position: relative
-  top: 4px
-  margin-left: 7px
-
 .primary-text--methodology
-  width: 1026px
   text-align: left
 
-.rate-block--methodology
-  position: relative
-  top: 4px
-  margin-left: 11px
+.methodology__img
+  margin-right: 54px
+  margin-top: 10px
 
 .methodology-brands
   display: flex
   flex-direction: row
   align-items: center
   justify-content: space-between
-  margin-left: 100px
-
-.methodology-brands__img--yelp
-  width: 104px
-  height: 51px
-
-.methodology-brands__img--tripadvisor
-  width: 129px
-  height: 60px
-
-.methodology-brands__img--zagat
-  width: 117px
-  height: 28px
-
-.methodology-brands__img--jdpower
-  width: 158px
-  height: 23px
-
-.methodology-brands__img--the-port
-  width: 210px
-  height: 30px
-  opacity: 0.5
+  margin-left: 115px
 
 .related
   background: #FFFFFF
@@ -704,4 +647,3 @@ b
 
   .mobile-only-show
     display: none
-

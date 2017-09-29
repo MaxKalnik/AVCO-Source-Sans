@@ -11,13 +11,19 @@
       background-size: cover
 
   .text-box
-    padding: 64px 60px 64px 60px
+    padding: 45px 60px 45px 60px
     &--upper
       position: relative
 
-  .upper-text__container
-    &:before
-      height: 214px
+  .text-box--overview
+    padding: 60px
+
+  .text-box--methology
+    padding-bottom: 60px
+
+  .overview__text
+    min-width: 785px
+    max-width: 785px
 
 @media (max-width: 1850px)
   .content
@@ -45,13 +51,6 @@
 @media (max-width: 1370px)
   .content
     width: 980px
-
-  .upper-text__container
-    &:before
-      top: 10px
-      height: 305px
-      background: url('images/left-side-1024.svg') center no-repeat
-      background-size: cover
 
   .article-title
     font-size: 40px
@@ -83,37 +82,17 @@
       background: url('images/main_pic_1024@2x.png') center no-repeat
       background-size: cover
 
-  .under-title
-    margin-bottom: 32px
+  .text-box,
+  .text-box--overview,
+  .text-box--methodology
+    padding: 45px
 
-  .ranking-info__top
-    align-items: flex-start
+  .block-title
+    margin-bottom: 45px
 
-  .ranking-rest
-    margin-top: 52px
-
-  .ranking-rest--mrg
-    margin-top: 84px
-
-  .methodology-brands__img--yelp
-    width: 84px
-    height: 45px
-
-  .methodology-brands__img--tripadvisor
-    width: 103px
-    height: 48px
-
-  .methodology-brands__img--zagat
-    width: 93px
-    height: 22px
-
-  .methodology-brands__img--jdpower
-    width: 126px
-    height: 18px
-
-  .methodology-brands__img--the-port
-    width: 168px
-    height: 24px
+  .overview__text
+    min-width: 490px
+    max-width: 490px
 
   .related-head
     padding: 0 20px
@@ -138,9 +117,6 @@
     td
       &:nth-child(3)
         width: 18%
-
-  .primary-text--methodology
-    width: 786px
 
 @media (min-width: 1019px) and (max-width: 1370px)
   .ranking-info__title
@@ -171,42 +147,13 @@
     line-height: 16px
     font-weight: 300
 
-  .ranking-item
-    flex-direction: column
-
-  .ranking-info
+  .under-title__wrap
     margin-bottom: 16px
 
-  .ranking-rest
-    display: flex
-    flex-direction: row
-    width: auto
-    margin-top: 0
-    padding: 16px
-
-  .ranking-rest--mrg
-    margin-top: 0
-
-  .ranking-rest__text
-    font-size: 12px
-    line-height: 21px
-
-  .ranking-info__text
-    padding-right: 0
-
-  .primary-text
-    br
-      display: none
-
-  .ranking-rest__top
-    margin-bottom: 5px
-
-  .ranking-rest__img-container
-    margin-right: 16px
-    margin-bottom: 0
-
-  .ranking-rest__info
-    width: 246px
+  .region-list__item
+    margin-right: 12px
+    &:last-child
+      margin-right: 0
 
   .main-pic
     height: 540px
@@ -231,7 +178,7 @@
     margin: 0 10px
 
   .text-box
-    padding: 31px 25px 44px 25px
+    padding: 45px 25px 44px 25px
     &--upper
       display: flex
       flex-direction: row
@@ -241,13 +188,102 @@
 
       .under-title
         width: 445px
-        margin-bottom: 32px
 
       .main-text
         width: 100%
 
+  .text-box--region
+    padding-top: 30px
+
   .block-title
     margin-bottom: 32px
+
+  .block-title--overview
+    margin-bottom: 45px
+
+  .block-title--methodology
+    margin-bottom: 30px
+
+  .overview__text
+    min-width: 326px
+    max-width: 326px
+
+  .region-info__text
+    padding: 0 95px
+
+  .block-info
+    padding: 24px 24px 24px 72px
+    &:before
+      left: 24px
+
+  .region-info__table
+    thead
+      th
+        height: 48px
+        padding: 0 10px
+        font-size: 10px
+        line-height: 16px
+        color: $color_white
+        text-align: left
+        text-transform: uppercase
+        text-align: center
+        border-right: 1px solid rgba(255, 255, 255, 0.3)
+        box-sizing: border-box
+        text-align: center
+    tbody
+
+      td
+        position: relative
+        height: 68px
+        padding: 16px 10px
+        border-bottom: 1px solid #E6EEF2
+        border-right: 1px solid #F1F1F1
+        font-size: 16px
+        line-height: 21px
+        &:first-child
+          text-align: center
+          font-size: 14px
+          line-height: 16px
+          font-weight: 600
+          border-left: 1px solid #F1F1F1
+          color: #879DA8
+
+        &:nth-child(2)
+          width: 20%
+
+        &:nth-child(7)
+          width: 12%
+          text-align: center
+
+  .domestic--exp
+    font-size: 18px
+
+  .region-info__table-wrap--international
+    .international
+      font-size: 16px
+
+    .international--exp
+      font-size: 18px
+
+  .methodology-brands__img--bureau
+    width: 70px
+    height: 61px
+
+  .methodology-brands__img--census
+    width: 81px
+    height: 31px
+
+  .methodology-brands__img--zagat
+    width: 116px
+    height: 16px
+
+  .methodology-brands__img--jdpower
+    width: 66px
+    height: 66px
+
+  .methodology-brands__img--the-port
+    width: 64px
+    height: 64px
 
   .related-head
     padding: 0 20px
@@ -295,47 +331,6 @@
         &:nth-child(8)
           display: none
 
-  .methodology__img
-    margin-left: 8px
-
-  .primary-text--methodology
-    width: 586px
-
-  .rate-block--methodology
-    margin-left: 12px
-
-  .methodology-brands
-    flex-wrap: wrap
-    justify-content: space-around
-
-  .methodology-brands__img
-    margin: 0 50px
-
-  .methodology-brands__img--yelp
-    width: 83px
-    height: 40px
-    margin-left: 10px
-
-  .methodology-brands__img--tripadvisor
-    width: 103px
-    height: 48px
-
-  .methodology-brands__img--zagat
-    width: 93px
-    height: 22px
-
-  .methodology-brands__img--jdpower
-    width: 126px
-    height: 18px
-    margin-top: 36px
-    margin-right: 0
-
-  .methodology-brands__img--the-port
-    width: 168px
-    height: 24px
-    margin-top: 41px
-    margin-left: 40px
-
 @media (min-width: 759px)
   .mobile-only-close
     display: none
@@ -361,6 +356,13 @@
 
     max-width: 100%
     box-sizing border-box
+
+  .under-title__wrap
+    flex-direction: column
+    align-items: center
+
+  .under-title__img
+    margin-bottom: 30px
 
   .breadcrumbs__item:last-child
     overflow: hidden
@@ -410,14 +412,119 @@
         width: 100%
 
       .under-title
-        font-size: 16px
+        font-size: 18px
         line-height: 28px
         font-weight: 200
 
       .main-text
-        font-size: 14px
-        line-height: 24px
+        font-size: 16px
+        line-height: 26px
         font-weight: 300
+
+  .text-box--region
+    padding-bottom: 12px
+
+  .overview__item
+    flex-direction: column
+
+  .overview__text
+    min-width: 100%
+    max-width: 100%
+    order: 2
+
+  .overview__quote
+    text-align: center
+    margin-bottom: 12px
+
+  .overview__items-divider
+    margin: 30px auto
+
+  .overview__quote--item-1
+    width: 276px
+
+  .overview__quote--item-2
+    width: 272px
+    br
+      display: block
+
+  .overview__quote--item-3
+    width: 276px
+    br
+      display: none
+
+  .marked--item-1
+    &:before
+      text-align: left
+      width: 170px
+      background: url('images/svg/marked-1-mob.svg') left no-repeat
+
+  .marked--item-2
+    &:before
+      content: 'spend proportionally less'
+      line-height: 22px
+      text-align: right
+      position: absolute
+      right: -14px
+      top: 4px
+      width: 278px
+      height: 24px
+      padding-right: 4px
+      background: url('images/svg/marked-2.svg') center no-repeat
+
+  .marked--item-3
+    &:before
+      content: 'than 25.0%'
+      line-height: 22px
+      position: absolute
+      right: -4px
+      top: 4px
+      width: 115px
+      height: 24px
+      padding-right: 4px
+      background: url('images/svg/marked-3-mob.svg') right no-repeat
+
+  .marked--item-4
+    &:before
+      content: '16.2% of'
+      line-height: 22px
+      position: absolute
+      text-align: left
+      left: -4px
+      top: 4px
+      width: 92px
+      height: 24px
+      padding-left: 4px
+      background: url('images/svg/marked-4-mob.svg') center no-repeat
+
+  .mob-transparent
+    color: transparent
+
+  .block-info
+    padding: 24px
+    &:before
+      left: 50%
+      transform: translateX(-50%)
+      top: -12px
+
+  .region-info__text
+    padding: 0 10px
+
+  .block-subtitle
+    font-size: 30px
+    line-height: 36px
+
+  .region-list
+    flex-wrap: wrap
+
+  .region-list__item
+    margin-right: 20px
+    margin-bottom: 20px
+    &:nth-child(2n)
+      margin-right: 0
+
+  .region-list__link
+    width: 128px
+    height: 156px
 
   .primary-title
     font-size: 20px
@@ -439,95 +546,45 @@
       padding: 12px 8px
       font-size: 10px
 
-  .ranking-rest
-    flex-direction: column
-    padding: 10px 10px 16px 10px
-
-  .ranking-rest__img-container
-    width: 100%
-    height: auto
-    margin-bottom: 8px
-
-  .ranking-rest__img
-    position: static
-    width: 100%
-    min-height: 100%
-
-  .ranking-rest__info
-    width: 100%
-
-  .primary-text
-    overflow: hidden
-
-  .ranking-info
-    width: auto
-
-  .ranking-info__top
-    align-items: flex-start
-
-  .ranking-info__title-img
-    top: 2px
-
-  .ranking-info__subtitle
-    font-size: 11px
-
-  .ranking-info__title
-    font-size: 18px
-    line-height: 26px
-
-  .text-box--methology
-    padding-bottom: 20px
-
-  .methodology-content__item
+  .methodology-content
     flex-direction: column
     align-items: center
 
   .methodology__img
-    margin-left: 0
+    margin: 0
     margin-bottom: 24px
-
-  .rate-block--methodology
-    margin-left: 0
-    margin-bottom: 24px
-
-  .primary-text--methodology
-    width: 100%
-    margin-bottom: 16px
 
   .methodology-brands
     margin-left: 0
-
-  .methodology-brands
     flex-wrap: wrap
     justify-content: space-around
 
   .methodology-brands__img
-    margin: 0
+    margin: 0 10px
 
-  .methodology-brands__img--yelp
-    width: 83px
+  .methodology-brands__img--bureau
+    width: 70px
+    height: 61px
+    margin-bottom: 26px
+
+  .methodology-brands__img--census
+    width: 103x
     height: 40px
-    margin: 0 20px 25px 20px
-
-  .methodology-brands__img--tripadvisor
-    width: 90px
-    height: 42px
-    margin: 0 20px 25px 20px
+    margin-bottom: 26px
 
   .methodology-brands__img--zagat
-    width: 93px
-    height: 22px
-    margin: 0 10px 25px 10px
+    width: 116px
+    height: 16px
+    margin-bottom: 26px
 
   .methodology-brands__img--jdpower
-    width: 126px
-    height: 18px
-    margin: 0 10px 25px 10px
+    width: 66px
+    height: 66px
+    margin-bottom: 26px
 
   .methodology-brands__img--the-port
-    width: 168px
-    height: 24px
-    margin-bottom: 25px
+    width: 64px
+    height: 64px
 
   .cols__wrap
     flex-wrap wrap

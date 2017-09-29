@@ -1,103 +1,213 @@
 @import "_variable.styl"
 
-.table
-	position: relative
-	width: 650px
-	background: linear-gradient(to right, #4D4BD4 0%, #7A79D4 100%)
-	padding-top: 65px
-	padding-left: 2px
-	padding-right: 2px
-	padding-bottom: 2px
-	border-radius: 5px
-	box-shadow: -1px 37px 43px -40px rgba(20, 105, 161, 0.5)
-	&:before
-		content: ''
-		position: absolute
-		top: 12px
-		left: 16px
-		width: 70px
-		height: 54px
-		background-image: url(images/icons/icon_salut.svg)
-		background-repeat: no-repeat
-	&__head
-		position: absolute
-		top: 23px
-		left: 110px
-		font-size: 14px
-		font-weight: bold
-		color: $color_white
-		text-transform: uppercase
-		text-align: center
+.region-info__table-wrap
+  width: 100%
+  position: relative
 
-.full-table
-	width: 100%
-	min-width: 600px
-	border-collapse: collapse
-	background: linear-gradient(to right, #209CED 0%, #40C8F7 100%) center no-repeat
-	border-radius: 5px
-	thead
-		th
-			padding: 16px 20px
-			font-size: 12px
-			line-height: 16px
-			color: $color_white
-			text-align: left
-			text-transform: uppercase
-			border-right: 1px solid rgba(255,255,255,0.2)
-			&:first-child
-				text-align: center
+.region-info__table-bg
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  transition: .25s
 
-			&:nth-child(4),
-			&:nth-child(5),
-			&:nth-child(6)
-				text-align: center
+.region-info__table-bg--pink
+  background: linear-gradient(269deg, #FF5C98 3%, #FF2172 100%) center no-repeat
+  opacity: 0.9
 
-			&:nth-child(7)
-				text-align: center
+.region-info__table-bg--orange
+  background: linear-gradient(-269deg, #F2AD00 3%, #F3C93C 100%) center no-repeat
+  opacity: 0
 
-			&:last-child
-				border-right: none
+.region-info__table
+  position: relative
+  width: 100%
+  border-collapse: collapse
+  border-radius: 5px
+  thead
+    th
+      height: 48px
+      padding: 0 20px
+      font-size: 12px
+      line-height: 16px
+      color: $color_white
+      text-align: left
+      text-transform: uppercase
+      text-align: center
+      border-right: 1px solid rgba(255, 255, 255, 0.3)
+      box-sizing: border-box
+      text-align: center
+      &:nth-child(2)
+        text-align: left
 
-	tbody
-		tr
-			background-color: #ffffff
+      &:last-child
+        border-right: none
 
-		td
-			padding: 16px 20px
-			border-top: 1px solid #F2FBFE
-			border-bottom: 1px solid #E6EEF2
-			font-size: 14px
-			line-height: 16px
-			&:first-child
-				text-align: center
-				font-size: 12px
-				line-height: 14px
-				font-weight: 600
-				color: #859BA6
+  tbody
+    tr
+      background-color: #ffffff
+      &:nth-child(even)
+        background: #fafcfc
 
-			&:nth-child(2)
-				width: 17%
-				font-weight: 600
-				color: #1C3144
+    td
+      position: relative
+      height: 68px
+      padding: 16px 20px
+      border-bottom: 1px solid #E6EEF2
+      border-right: 1px solid #F1F1F1
+      font-size: 18px
+      line-height: 21px
+      text-align: center
+      box-sizing: border-box
+      color: #0a0c0d
+      &:first-child
+        text-align: center
+        font-size: 14px
+        line-height: 16px
+        font-weight: 600
+        border-left: 1px solid #F1F1F1
+        color: #879DA8
 
-			&:nth-child(3)
-				font-size: 14px
-				line-height: 16px
+      &:nth-child(2)
+        width: 17%
+        font-size: 18px
+        line-height: 16px
+        font-weight: 600
+        color: #1C3144
+        text-align: left
 
-			&:nth-child(4),
-			&:nth-child(5),
-			&:nth-child(6)
-				font-weight: 600
-				color: #0a0c0d
-				font-size: 14px
-				line-height: 16px
-				text-align: center
+      &:nth-child(7)
+        width: 12%
+        text-align: center
 
-			&:nth-child(7)
-				width: 12%
-				text-align: center
+      span
+        display: block
 
-	.rate-block
-		background: linear-gradient(147deg, #40C8F7 0%, #46ADF0 100%)
-		&:before
-			top: 5px
+.domestic
+  font-weight: 600
+  transition: .35s
+  position: absolute
+  top: 16px
+  left: 50%
+  transform: translateX(-50%) translateY(0) scale(1)
+  will-change: transform
+
+.international
+  font-size: 11px
+  line-height: 12px
+  font-weight: 600
+  opacity: 0.4
+  transition: .35s
+  position: absolute
+  top: 39px
+  left: 50%
+  transform: translateX(-50%) translateY(0) scale(1)
+  will-change: transform
+  will-change: font-size
+
+.domestic--exp
+  color: #EC2E6F
+
+.region-info__table-wrap--international
+  .region-info__table-bg--pink
+    opacity: 0
+
+  .region-info__table-bg--orange
+    opacity: 1
+
+  .domestic
+    opacity: 0.4
+    transform: translateX(-50%) translateY(18px) scale(0.6)
+
+  .domestic--exp
+    color: #0a0c0d
+    opacity: 0.4
+
+  .international
+    color: #0a0c0d
+    transform: translateX(-50%) translateY(-18px)
+    font-size: 18px
+    opacity: 1
+
+  .international--exp
+    color: #ECAB46
+
+.table-switcher
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin-bottom: 24px
+
+.table-switcher__btn
+  font-size: 14px
+  line-height: 22px
+  color: #797f92
+  font-weight: 600
+  text-transform: uppercase
+  cursor: pointer
+
+.table-switcher__btn--active
+  color: #ff377d
+  font-weight: 700
+
+.table-switcher__toggle-btn
+  position: relative
+  width: 60px
+  height: 32px
+  padding: 4px 6px
+  border-radius: 30px
+  margin: 0 13px
+  font-size: 0
+  box-sizing: border-box
+  border-radius: 20px
+  cursor: pointer
+  transition: background-image 8.25s
+  overflow: hidden
+
+.table-switcher__toggle-bg
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  transition: .25s
+
+.table-switcher__toggle-bg--pink
+  background-image: linear-gradient(269deg, #FF5C98 3%, #FF2172 100%)
+  opacity: 0.9
+
+.table-switcher__toggle-bg--orange
+  background-image: linear-gradient(-269deg, #F3C93C 1%, #F2AD00 99%)
+  opacity: 0
+
+.table-switcher__toggle-img
+  position: absolute
+  will-change: transform
+  transition: .25s
+  z-index: 2
+
+.table-switcher__toggle
+  width: 50%
+  height: 24px
+  display: inline-block
+  cursor: pointer
+
+.table-switcher__btn--domestic
+  color: #ff377d
+
+.table-switcher--international
+  .table-switcher__toggle-bg--orange
+    opacity: 0.9
+
+  .table-switcher__toggle-bg--pink
+    opacity: 0
+
+  .table-switcher__btn--domestic
+    color: #797f92
+
+  .table-switcher__btn--international
+    color: #edaa30
+
+  .table-switcher__toggle-img
+    transform: translateX(24px)

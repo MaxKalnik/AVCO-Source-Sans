@@ -128,8 +128,14 @@ gulp.task('watch', function () {
     gulp.watch(['src/**']).on('change', livereload.changed);
 });
 
+gulp.task("copy", function() {
+    return gulp.src(["src/fonts/**"], {base: "src"})
+        .pipe(gulp.dest("build"));
+
+});
+
 gulp.task('default', [
-    'copyhtml','stylus', 'images', 'js', 'browsersync-server', 'watch'
+    'copyhtml', 'copy', 'stylus', 'images', 'js', 'browsersync-server', 'watch'
 ]);
 
 gulp.task('prod', ['clean', 'copyhtml','stylus', 'images', 'js', 'inlinesource']);
