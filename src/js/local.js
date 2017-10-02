@@ -27,6 +27,27 @@ $(document).ready(function () {
 
     }
 
+    body.on('click', '.js-table', function(event){
+      event.preventDefault();
+      body.append($(this).parents('.overflow-table'));
+      $('html, body').scrollTop(0);
+      $('.page__wrap').hide();
+      $('.overflow-table').addClass('show');
+      return false
+
+    });
+
+    body.on('click', '.mobile-only-close', function(event) {
+      event.preventDefault();
+      var parent = $(this).attr('href');
+      var currentTable = $(this).parents('.overflow-table');
+      $('.overflow-table').removeClass('show');
+      $(parent).find('.region-features').after($(currentTable));
+      $('.page__wrap').show();
+      $('html, body').animate({ scrollTop: $(currentTable).position().top }, 500);
+      return false
+    });
+
     topMenu();
     $(window).on('resize', function () {
         topMenu();

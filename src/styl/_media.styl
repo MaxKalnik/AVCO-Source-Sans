@@ -195,6 +195,9 @@
   .text-box--region
     padding-top: 30px
 
+  .overview__quote--item-2
+    margin-right: 0
+
   .block-title
     margin-bottom: 32px
 
@@ -444,6 +447,7 @@
 
   .overview__quote--item-2
     width: 272px
+    margin-right: auto
     br
       display: block
 
@@ -465,7 +469,7 @@
       text-align: right
       position: absolute
       right: -14px
-      top: 4px
+      top: 6px
       width: 278px
       height: 24px
       padding-right: 4px
@@ -484,6 +488,7 @@
       background: url('images/svg/marked-3-mob.svg') right no-repeat
 
   .marked--item-4
+    display: inline-block
     &:before
       content: '16.2% of'
       line-height: 22px
@@ -515,6 +520,10 @@
 
   .region-list
     flex-wrap: wrap
+
+  .region-list
+    max-width: 276px
+    margin: 0 auto
 
   .region-list__item
     margin-right: 20px
@@ -600,6 +609,51 @@
     .block-title
       font-size 26px
       line-height: 34px
+
+  .region-info__table
+    width: 600px
+
+  .region-info__table-bg--orange,
+  .region-info__table-bg--pink
+    width: 600px
+
+  .region-info__table
+    thead
+      th
+        height: 48px
+        padding: 0 15px
+        font-size: 8px
+        line-height: 16px
+
+    tbody
+      td
+        position: relative
+        height: 68px
+        padding: 10px 15px
+        font-size: 14px
+        line-height: 21px
+        &:first-child
+          text-align: center
+          font-size: 10px
+          line-height: 16px
+          font-weight: 600
+          border-left: 1px solid #F1F1F1
+          color: #879DA8
+
+        &:nth-child(2)
+          width: 18%
+          font-size: 14px
+          line-height: 16px
+
+  .domestic--exp
+    font-size: 15px
+
+  .international
+    font-size: 10px
+
+  .region-info__table-wrap--international
+    .international
+      font-size: 15px
 
   .related-list
     padding-top: 19px
@@ -711,15 +765,19 @@
     line-height: 41px
     font-weight bold
     position: fixed
-    background-color $main_color
+    background-color: #FF5795
     top: 10px
     right: 25px
     .icon
       margin-right: 8px
 
-  .ranking-table
-    .full-table
+  .region-info
+    .region-info__table-wrap
       display: none
+
+    .table-switcher
+      display: none
+
     .mobile-only-show
       display: block
 
@@ -728,15 +786,12 @@
     margin-right: 15px
     margin-left: 15px
     margin-top: 45px
-    .primary-text
-      display: none
-    .block-title
-      font-size: 24px
-      font-weight: 600
-    .full-table
-      display: table
+    .region-info__table-wrap
+      display: block
       width: 100%
       overflow scroll
+    .table-switcher
+      display: flex
     .mobile-only-show
       display: none
     .mobile-only-close
