@@ -93,19 +93,20 @@
   font-weight: 600
   transition: .35s
   transform: scale(1)
+  will-change: transform
 
 .international
   display: inline-block
   width: 100%
-  font-size: 16px
-  line-height: 12px
   font-weight: 600
   opacity: 0.4
   transition: .35s
   transform: scale(0.7)
+  will-change: transform
 
 .domestic--exp
   color: #EC2E6F
+  font-weight: 700
 
 .region-info__table-wrap--international
   .region-info__table-bg--pink
@@ -121,6 +122,7 @@
   .domestic--exp
     color: #0a0c0d
     opacity: 0.4
+    font-weight: 600
 
   .international
     transform: translateY(-21px) scale(1)
@@ -128,6 +130,8 @@
 
   .international--exp
     color: #ffaa00
+    font-weight: 700
+
 
 .table-switcher
   display: flex
@@ -158,15 +162,14 @@
   box-sizing: border-box
   border-radius: 20px
   cursor: pointer
-  transition: background-image 8.25s
   overflow: hidden
 
 .table-switcher__toggle-bg
   position: absolute
-  width: 100%
+  width: calc(100% + 1px)
   height: 100%
   top: 0
-  left: 0
+  left: -1px
   transition: .25s
   border-radius: 20px
 
