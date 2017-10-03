@@ -481,7 +481,7 @@
       line-height: 22px
       position: absolute
       right: -4px
-      top: 4px
+      top: 1px
       width: 115px
       height: 24px
       padding-right: 4px
@@ -611,11 +611,11 @@
       line-height: 34px
 
   .region-info__table
-    width: 600px
+    width: 675px
 
   .region-info__table-bg--orange,
   .region-info__table-bg--pink
-    width: 600px
+    width: 675px
 
   .region-info__table
     thead
@@ -625,12 +625,15 @@
         font-size: 8px
         line-height: 16px
 
+        &:last-child
+          border-right: 1px solid rgba(255, 255, 255, 0.3)
+
     tbody
       td
         position: relative
         height: 68px
         padding: 10px 15px
-        font-size: 12px
+        font-size: 15px
         line-height: 21px
         &:first-child
           text-align: center
@@ -646,14 +649,16 @@
           line-height: 16px
 
   .domestic--exp
-    font-size: 13px
+    font-size: 15px
 
   .international
-    font-size: 8px
+    font-size: 10px
 
   .region-info__table-wrap--international
     .international
-      font-size: 13px
+      font-size: 15px
+    .domestic
+      transform: translateX(-50%) translateY(18px) scale(0.7)
 
   .related-list
     padding-top: 19px
