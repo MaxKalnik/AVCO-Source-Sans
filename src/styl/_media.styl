@@ -222,51 +222,25 @@
   .region-info__table
     thead
       th
-        height: 48px
         padding: 0 10px
         font-size: 8px
         line-height: 16px
-        color: $color_white
-        text-align: left
-        text-transform: uppercase
-        text-align: center
-        border-right: 1px solid rgba(255, 255, 255, 0.3)
-        box-sizing: border-box
-        text-align: center
-    tbody
 
+    tbody
       td
-        position: relative
-        height: 68px
         padding: 16px 10px
-        border-bottom: 1px solid #E6EEF2
-        border-right: 1px solid #F1F1F1
-        font-size: 14px
-        line-height: 21px
+        width: 15%
+        font-size: 16px
+        box-sizing: border-box
         &:first-child
-          text-align: center
-          font-size: 12px
-          line-height: 16px
-          font-weight: 600
-          border-left: 1px solid #F1F1F1
-          color: #879DA8
+          width: 5%
 
         &:nth-child(2)
+          font-size: 14px
           width: 20%
 
         &:nth-child(7)
-          width: 12%
-          text-align: center
-
-  .domestic--exp
-    font-size: 16px
-
-  .region-info__table-wrap--international
-    .international
-      font-size: 14px
-
-    .international--exp
-      font-size: 16px
+          width: 15%
 
   .methodology-brands__img--bureau
     width: 70px
@@ -314,25 +288,6 @@
 
   .text-box.last
     padding-top: 25px
-
-  .full-table
-    thead
-      th
-        &:nth-child(7),
-        &:nth-child(8)
-          display: none
-
-    tbody
-      td
-        &:nth-child(2)
-          width: 25%
-
-        &:nth-child(3)
-          width: 23%
-
-        &:nth-child(7),
-        &:nth-child(8)
-          display: none
 
 @media (min-width: 759px)
   .mobile-only-close
@@ -617,48 +572,41 @@
   .region-info__table-bg--pink
     width: 675px
 
+  .domestic
+    font-size: 15px
+
+  .international
+    font-size: 15px
+
   .region-info__table
     thead
       th
-        height: 48px
         padding: 0 15px
         font-size: 8px
-        line-height: 16px
 
         &:last-child
           border-right: 1px solid rgba(255, 255, 255, 0.3)
 
     tbody
       td
-        position: relative
-        height: 68px
-        padding: 10px 15px
+        padding: 16px 15px
         font-size: 15px
-        line-height: 21px
         &:first-child
-          text-align: center
-          font-size: 8px
-          line-height: 16px
-          font-weight: 600
-          border-left: 1px solid #F1F1F1
-          color: #879DA8
+          font-size: 10px
 
         &:nth-child(2)
-          width: 18%
           font-size: 12px
-          line-height: 16px
-
-  .domestic--exp
-    font-size: 15px
-
-  .international
-    font-size: 10px
 
   .region-info__table-wrap--international
-    .international
-      font-size: 15px
+    .region-info__table-bg--pink
+      opacity: 0
+
+    .region-info__table-bg--orange
+      opacity: 1
+
     .domestic
-      transform: translateX(-50%) translateY(18px) scale(0.7)
+      opacity: 0.4
+      transform: translateY(22px) scale(0.7)
 
   .related-list
     padding-top: 19px
