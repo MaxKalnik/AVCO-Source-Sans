@@ -2,7 +2,7 @@
 @import "_mixins.styl"
 
 body
-  font-family: Whitney SSm A, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   $ultraThin()
 
 ul,li
@@ -60,6 +60,12 @@ b
   background-image: url('images/main_pic.png')
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2)
     background-image: url('images/main_pic@2x.png')
+
+.mobile-only
+  display: none
+
+.ave
+  display: inline-block
 
 .main-pic__mask
   position: absolute
