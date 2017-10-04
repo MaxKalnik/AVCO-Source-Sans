@@ -82,14 +82,34 @@ $(document).ready(function () {
     });
 
 });
-$(function() {
+    $(function() {
 
-  $('tr').swipeRight( {
+      $("tr").swipe( {
 
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-      $(this).parents('.region-info__table-wrap').addClass('region-info__table-wrap--international');
-    },
+        swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+          $(this).parents('.region-info__table-wrap').addClass('region-info__table-wrap--international');
+          $(this).parents('.region-info').find('.table-switcher').addClass('table-switcher--international');
+        },
 
-     threshold:0
-  });
-});
+        swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+          $(this).parents('.region-info__table-wrap').removeClass('region-info__table-wrap--international');
+          $(this).parents('.region-info').find('.table-switcher').removeClass('table-switcher--international');
+        },
+
+         threshold: 15
+      });
+    });
+
+    // $(function() {
+
+    //   $("tr").swipe( {
+
+    //     swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+    //       $(this).parents('.region-info__table-wrap').removeClass('region-info__table-wrap--international');
+    //       $(this).parents('.region-info').find('.table-switcher').removeClass('table-switcher--international');
+    //       console.log(direction);
+    //     },
+
+    //      threshold: 15
+    //   });
+    // });
