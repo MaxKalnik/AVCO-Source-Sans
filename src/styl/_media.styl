@@ -763,7 +763,12 @@
         flex-direction: row
         align-items: center
         padding: 16px
+        font-weight: 700
         background: #ffffff
+
+        &:nth-child(2n-2)
+          background: #FAFCFC
+
         &:first-child
           font-size: 14px
           font-weight: 700
@@ -787,11 +792,13 @@
           display: inline-block
           background: transparent
           border-top: 1px solid #e6eef2
+          border-right: none
           background: transparent
 
 
         &:nth-child(7)
           width: 100%
+          border-bottom: none
 
 
   .mobile-only
