@@ -82,3 +82,14 @@ $(document).ready(function () {
     });
 
 });
+$(function() {
+
+  $('tr').swipeRight( {
+
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      $(this).parents('.region-info__table-wrap').addClass('region-info__table-wrap--international');
+    },
+
+     threshold:0
+  });
+});

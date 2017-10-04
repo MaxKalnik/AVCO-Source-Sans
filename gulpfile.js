@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     autoprefixer = require('autoprefixer-stylus'),
+    htmlmin = require('gulp-htmlmin'),
     cssmin = require('gulp-cssmin'),
     rename = require('gulp-rename'),
     jsmin = require('gulp-jsmin'),
@@ -94,6 +95,13 @@ gulp.task('copyhtml', function () {
         .pipe(gulp.dest(build_path.html));
 });
 
+
+gulp.task('minifyhtml', function() {
+  return gulp.src([dev_path.html + '*.html'])
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(build_path.html));
+});
+
 gulp.task('browsersync-server', function () {
     browsersync.init(null, {
         server: {
@@ -122,7 +130,7 @@ gulp.task('clean', function () {
 gulp.task('watch', function () {
     gulp.watch(dev_path.styl + '**/*.styl', ['stylus']);
     gulp.watch([dev_path.img + '**/*'], ['images']);
-    gulp.watch([dev_path.html + '*.html'], ['copyhtml']);
+    gulp.watch([dev_path.html + '*.html'], ['minifyhtml']);
     gulp.watch(dev_path.js + '**/*.js', ['js']);
     livereload.listen();
     gulp.watch(['src/**']).on('change', livereload.changed);
@@ -135,7 +143,7 @@ gulp.task("copy", function() {
 });
 
 gulp.task('default', [
-    'copyhtml', 'copy', 'stylus', 'images', 'js', 'browsersync-server', 'watch'
+    'minifyhtml', 'stylus', 'images', 'js', 'browsersync-server', 'watch'
 ]);
 
-gulp.task('prod', ['clean', 'copyhtml','stylus', 'images', 'js', 'inlinesource']);
+gulp.task('prod', ['clean', 'minifyhtml', 'stylus', 'images', 'js', 'inlinesource']);
