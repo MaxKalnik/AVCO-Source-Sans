@@ -82,3 +82,21 @@ $(document).ready(function () {
     });
 
 });
+    $(function() {
+
+      $("tr").swipe( {
+
+        swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+          $(this).parents('.region-info__table-wrap').addClass('region-info__table-wrap--international');
+          $(this).parents('.region-info').find('.table-switcher').addClass('table-switcher--international');
+        },
+
+        swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+          $(this).parents('.region-info__table-wrap').removeClass('region-info__table-wrap--international');
+          $(this).parents('.region-info').find('.table-switcher').removeClass('table-switcher--international');
+        },
+
+         threshold: 15
+      });
+    });
+
